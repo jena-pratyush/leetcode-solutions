@@ -1,0 +1,1 @@
+select today.id from Weather today, Weather yesterday where today.recordDate = yesterday.recordDate + INTERVAL 1 DAY and today.temperature > yesterday.temperature;
