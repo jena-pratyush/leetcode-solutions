@@ -1,0 +1,16 @@
+class Solution(object):
+    def arrayRankTransform(self, arr):
+        sorted_arr = sorted(arr)
+        rank = {}
+        
+        r = 1
+        for num in sorted_arr:
+            if num not in rank:
+                rank[num] = r
+                r += 1
+        
+        result = []
+        for num in arr:
+            result.append(rank[num])
+        
+        return result
